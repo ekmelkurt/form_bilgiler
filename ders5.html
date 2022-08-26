@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-color:rgba(236, 243, 211, 0.781);
+        }
+
+        #isim {
+            font-style: italic;
+            color: red;
+            border: 2px solid red;
+            background-color: rgb(196, 195, 144);
+            border-radius: 25px;
+        }
+
+        #okul {
+            font-style: italic;
+            color: green;
+            border: 2px solid green;
+            background-color: rgb(210, 136, 212);
+            border-radius: 25px;
+        }
+
+        #yas {
+            font-style: italic;
+            color: darkorchid;
+            border: 2px solid darkorchid;
+            background-color: rgb(145, 211, 143);
+            border-radius: 25px;
+        }
+
+        #eposta {
+            font-style: italic;
+            color: yellow;
+            border: 2px solid yellow;
+            background-color: rgb(71, 59, 59);
+            border-radius: 25px;
+        }
+
+        h5 {
+        text-align: center;
+        background-color: royalblue;
+        border-radius: 15px 15px 15px 15px;
+        padding: 15px;
+        margin-top: 50px;
+    }
+    </style>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Anasayfa</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="ders1.html">Ders1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ders2.html">Ders2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ders3.html">Ders3</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ders4.html">Ders4</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ders5.html">Proje</a>
+              </li>
+            </ul>
+        
+          </div>
+        </div>
+      </nav>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-lg-3 col-md-3">
+            <form id="frm">
+                <input placeholder="İsim Giriniz" id="isim" type="text" class="form-control" required />
+                <br> <br>
+                <input placeholder="Okulunuzu Giriniz" id="okul" type="text" class="form-control" required />
+                <br> <br>
+                <input placeholder="Yaşınız " id="yas" type="number" class="form-control" required />
+                <br> <br>
+                <input placeholder="ePosta Adresiniz" id="eposta" type="text" class="form-control" required />
+                <br> <br>
+                <button type="button" class="form-control btn btn-outline-success" onclick="Kayit()">Kaydet</button>
+            </form>
+        </div>
+        <div class="col-lg-9 col-sm-9">
+            <table class="table table-striped table-hover">
+
+                <tr id="i" class="table-danger">
+                    <th>İsim</th>
+
+                </tr>
+                <tr id="o" class="table-success">
+                    <th>Okul</th>
+
+                </tr>
+                <tr id="y" class="table-secondary">
+                    <th>Yaş</th>
+
+                </tr>
+                <tr id="e" class="table-warning">
+                    <th>E-Posta</th>
+
+                </tr>
+
+            </table>
+            <h1>İsminiz Artık 5 Harflidir:)</h1>
+            <p id="p1"></p>
+
+
+            
+
+        </div>
+    </div>
+
+    <footer>
+        <h5> &copy; 2022 Btk-Akademi Erzurum Yaz Kampı</h5>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        function Kayit() {
+            //input isim
+            var trIsim = document.querySelector("tr#i")
+            var tdIsim = document.createElement("td")
+            console.log(tdIsim)
+            var isim = document.querySelector("form#frm>input#isim").value
+            tdIsim.innerHTML = isim;
+            trIsim.append(tdIsim)
+            /*console.log(trDom)
+            console.log(tdDom)*/
+            //input okul
+            var trOkul = document.querySelector("tr#o")
+            var tdOkul = document.createElement("td")
+            var okul = document.querySelector("form#frm>input#okul").value
+            tdOkul.innerHTML = okul;
+            trOkul.append(tdOkul)
+            //input yas
+            var trYas = document.querySelector("tr#y")
+            var tdYas = document.createElement("td")
+            var yas = document.querySelector("form#frm>input#yas").value
+            tdYas.innerHTML = yas;
+            trYas.append(tdYas)
+            //input e posta
+            var trEposta = document.querySelector("tr#e")
+            var tdEposta = document.createElement("td")
+            var eposta = document.querySelector("form#frm>input#eposta").value
+            tdEposta.innerHTML = eposta;
+            trEposta.append(tdEposta);
+
+            var pDom1=document.querySelector("p#p1")
+            pDom1.innerHTML=isim;
+            console.log(pDom1)
+
+            var pDom2=document.querySelector("p#p2")
+            pDom2.innerHTML=isim;
+            console.log(pDom2)
+
+            
+            sayi=isim.length
+
+        
+          if(sayi.length>5){
+            //besBuyuk.push(ogrenci[i])
+            var pDom=document.querySelector("p#p1")
+            pDom.innerHTML="isminiz: ",isim;
+            console.log(pDom)
+          }
+          else{
+            var pDom=document.querySelector("p#p2")
+            pDom.innerHTML=isim;
+            console.log(pDom)
+          }
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

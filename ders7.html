@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>dizilere özgü metotlar</h3>
+</body>
+
+
+
+    <script>
+
+        ogrenci=[]
+        besBuyuk=[]
+        besKucuk=[]
+        for(i=0;i<10;i++){
+           isimler= prompt( i+1+". ismi giriniz:")
+            ogrenci.push(isimler)
+        }
+
+        for(i=0;i<ogrenci.length;i++){
+          if(ogrenci[i].length>5){
+            besBuyuk.push(ogrenci[i])
+          }
+          else if(ogrenci[i].length<5){
+            besKucuk.push(ogrenci[i])
+          }
+
+        }
+        console.log(ogrenci)
+        console.log(besBuyuk)
+        console.log(besKucuk)
+        /*var dizi=[1,2,3,4,5,6]
+        var kareDizisi=[]
+        var tekDizisi=[]
+        dizi.forEach(element => {
+            if(element%2==0){
+               // kareDizisi[element]= element*element
+               kareDizisi.push(element*element)
+            }
+            else{
+                //tekDizisi[element]= element*element*element
+                tekDizisi.push(element*element*element)
+            }
+            
+            
+        });
+        console.log(kareDizisi)
+        console.log(tekDizisi)*/
+    </script>
+</html>

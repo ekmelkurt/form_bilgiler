@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="tik">Ders6</h1>
+
+    <h3 class="cuma"></h3>
+    <h3 class="cuma"></h3>
+    <h3 class="cuma"></h3>
+    <ol>
+        <li class="cuma">bir</li>
+        <li class="cuma">iki</li>
+        <li class="cuma">uc</li> 
+        <li class="cuma">dort</li>
+        <li id="gec" class="cuma">bes</li>
+    </ol>
+    <ul>
+        
+        <li><a href="index.html">Ana SAyfa</a></li>
+        <li><a href="ders1.html">Ders1</a></li>
+        <li><a href="ders2.html">Ders2</a></li>
+        <li><a href="ders3.html">Ders3</a></li>
+        <li><a href="ders4.html">Ders4</a></li>
+        <li><a href="ders5.html">Des5</a></li>
+        <li><a href="ders6.html">Ders6</a></li>
+    </ul>
+</body>
+
+<script>
+    baslik=["Havuç","Havuz","Halı"]
+    iller=["Erzurum","Ankara","Mersin","Bursa","Hatay"]
+     var erisim=document.querySelectorAll("h3.cuma")
+     for(i=0;i<baslik.length;i++) {
+			erisim[i].innerHTML=baslik[i]
+		}
+        var liler=document.querySelectorAll("li.cuma")
+        for(i=0;i<5;i++){
+            liler[i].innerHTML=iller[i]
+        }
+
+       gec.addEventListener("mouseover",cagir)
+       tik.addEventListener("click",tikla)
+      
+
+        function cagir(){
+
+            liler[1].style.color="red"
+            liler[1].style.backgroundColor="blue"
+        }
+
+        function tikla(){
+            liler[0].innerHTML+=" Değişti"
+        }
+</script>
+</html>

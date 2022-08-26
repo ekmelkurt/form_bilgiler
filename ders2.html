@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ders2</h1>
+
+    <h2 id="baslik">9. gün</h2>
+    <p class="paragraf">Paragraflar</p>
+    <p class="paragraf">Paragraflar</p>
+    <p class="paragraf">Paragraflar</p>
+    <p class="paragraf">Paragraflar</p>
+    <p class="paragraf">Paragraflar</p>
+    <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="ders1.html">Ders1</a></li>
+        <li><a href="ders2.html">Ders2</a></li>
+        <li><a href="ders3.html">Ders3</a></li>
+        <li><a href="ders4.html">Ders4</a></li>
+        <li><a href="ders5.html">Ders5</a></li>
+        <li><a id="uyar" href="ders6.html">Ders6</a></li>
+    </ul>
+
+    <script>
+        var baslik=document.getElementById("baslik")
+        var paragraflar=document.querySelectorAll("p.paragraf")
+        var uyar=document.getElementById("uyar")
+        baslik.addEventListener("click",fonksiyon)
+        uyar.addEventListener("mouseover",gec)
+
+        function fonksiyon() {
+            paragraflar[2].style.color="red"
+        }
+        function gec(){
+            alert("Sana inanmayan kafirdir!")
+        }
+    </script>
+</body>
+</html>
